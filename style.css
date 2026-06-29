@@ -1,0 +1,690 @@
+/* ===================================
+   NovaCore Studio V2
+   Style.css Part 1
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --bg:#0f1117;
+    --card:#181c26;
+    --primary:#d4af37;
+    --secondary:#ffffff;
+    --text:#d6d6d6;
+    --border:rgba(255,255,255,.08);
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+    --radius:18px;
+    --transition:.35s;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--secondary);
+    overflow-x:hidden;
+}
+
+body.light{
+
+    --bg:#f5f5f5;
+    --card:#ffffff;
+    --secondary:#111111;
+    --text:#555;
+    --border:#dddddd;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+section{
+
+    padding:90px 8%;
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+
+    font-size:2.4rem;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.section-title p{
+
+    color:var(--text);
+}
+
+/* Loader */
+
+.loader{
+
+    position:fixed;
+    inset:0;
+    background:#000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-logo{
+
+    font-size:2rem;
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+/* Header */
+
+.header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,17,23,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+    z-index:1000;
+}
+
+.logo{
+
+    font-size:1.8rem;
+    font-weight:700;
+}
+
+.logo span{
+
+    color:var(--primary);
+}
+
+.navbar{
+
+    display:flex;
+    gap:25px;
+}
+
+.navbar a{
+
+    transition:var(--transition);
+    font-weight:500;
+}
+
+.navbar a:hover{
+
+    color:var(--primary);
+}
+
+.nav-icons{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.nav-icons button{
+
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:var(--card);
+    color:var(--secondary);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-icons button:hover{
+
+    background:var(--primary);
+    color:#111;
+}
+
+.login-btn{
+
+    border:none;
+    padding:10px 22px;
+    border-radius:40px;
+    background:var(--primary);
+    cursor:pointer;
+    font-weight:600;
+}
+
+.menu-btn{
+
+    display:none;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    align-items:center;
+    gap:50px;
+    padding-top:120px;
+}
+
+.hero h1{
+
+    font-size:3.7rem;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+
+    display:flex;
+    gap:18px;
+}
+
+.btn{
+
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:40px;
+    background:var(--primary);
+    color:#111;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+}
+
+.btn.outline{
+
+    background:transparent;
+    color:var(--secondary);
+    border:2px solid var(--primary);
+}
+
+.hero-image{
+
+    display:flex;
+    justify-content:center;
+}
+
+.image-card{
+
+    width:360px;
+    height:360px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#1d2230,#10131c);
+    border:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    box-shadow:var(--shadow);
+}
+/* ===================================
+   NovaCore Studio V2
+   Style.css Part 2
+===================================*/
+
+/* Categories */
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.category-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:35px 25px;
+    text-align:center;
+    transition:var(--transition);
+    box-shadow:var(--shadow);
+}
+
+.category-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+}
+
+.category-icon{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+.category-card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+}
+
+.category-card p{
+    color:var(--text);
+    line-height:1.7;
+}
+
+/* Products */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:var(--card);
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    padding:30px;
+    text-align:center;
+    position:relative;
+    transition:var(--transition);
+    box-shadow:var(--shadow);
+}
+
+.product-card:hover{
+    transform:translateY(-10px);
+}
+
+.badge{
+    position:absolute;
+    top:18px;
+    right:18px;
+    background:var(--primary);
+    color:#111;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:.8rem;
+    font-weight:600;
+}
+
+.product-card h3{
+    margin:20px 0 10px;
+}
+
+.product-card p{
+    color:var(--text);
+}
+
+.product-card strong{
+    display:block;
+    margin:20px 0;
+    color:var(--primary);
+    font-size:1.2rem;
+}
+
+.product-card button{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:40px;
+    background:var(--primary);
+    color:#111;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Brands */
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:20px;
+}
+
+.brand-box{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:35px;
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:700;
+    transition:var(--transition);
+}
+
+.brand-box:hover{
+    background:var(--primary);
+    color:#111;
+}
+
+/* Offer */
+
+.offer-card{
+    background:linear-gradient(135deg,#d4af37,#f7d774);
+    color:#111;
+    padding:60px 40px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.offer-card h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.offer-card p{
+    font-size:1.1rem;
+    margin-bottom:25px;
+}
+
+/* Reviews */
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.review-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:30px;
+    transition:var(--transition);
+    box-shadow:var(--shadow);
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+.review-card h3{
+    margin-bottom:15px;
+}
+
+.review-card p{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.review-card span{
+    color:var(--primary);
+    font-weight:600;
+}
+/*===================================
+ NovaCore Studio V2
+ Style.css Part 3
+===================================*/
+
+/* Newsletter */
+
+.newsletter{
+    text-align:center;
+}
+
+.newsletter-box{
+    max-width:750px;
+    margin:auto;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:50px 30px;
+    box-shadow:var(--shadow);
+}
+
+.newsletter-box h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.newsletter-box p{
+    color:var(--text);
+    margin-bottom:25px;
+}
+
+.newsletter form{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.newsletter input{
+    flex:1;
+    min-width:250px;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#222;
+    color:#fff;
+}
+
+.newsletter button{
+    padding:15px 28px;
+    border:none;
+    border-radius:50px;
+    background:var(--primary);
+    color:#111;
+    font-weight:600;
+    cursor:pointer;
+}
+
+/* Contact */
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:45px 30px;
+    box-shadow:var(--shadow);
+}
+
+.contact-box h3{
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    margin:12px 0;
+    color:var(--text);
+}
+
+.contact-box .btn{
+    margin-top:25px;
+}
+
+/* Footer */
+
+.footer{
+    text-align:center;
+    padding:40px 20px;
+    background:#090b10;
+    border-top:1px solid var(--border);
+}
+
+.footer h2{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.footer p{
+    color:var(--text);
+    margin:8px 0;
+}
+
+/* Back To Top */
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:var(--primary);
+    color:#111;
+    cursor:pointer;
+    display:none;
+    font-size:18px;
+    z-index:999;
+    transition:.3s;
+}
+
+#topBtn:hover{
+    transform:scale(1.1);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:20px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-image{
+margin-top:30px;
+}
+
+.navbar{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.nav-icons{
+gap:8px;
+}
+
+}
+
+@media(max-width:768px){
+
+section{
+padding:70px 5%;
+}
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.section-title h2{
+font-size:2rem;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.newsletter form{
+flex-direction:column;
+}
+
+.newsletter input,
+.newsletter button{
+width:100%;
+}
+
+}
+
+@media(max-width:480px){
+
+.logo{
+font-size:1.4rem;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.offer-card h2{
+font-size:1.8rem;
+}
+
+.offer-card{
+padding:40px 20px;
+}
+
+.contact-box,
+.newsletter-box{
+padding:30px 20px;
+}
+
+}
+
+/* Simple Fade Animation */
+
+.category-card,
+.product-card,
+.brand-box,
+.review-card,
+.contact-box,
+.newsletter-box{
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
